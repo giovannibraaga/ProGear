@@ -6,14 +6,14 @@ interface RelatorioItem {
   id: number;
   productName: string;
   quantity: number;
-  price: number;
+  revenue: number;
 }
 
 const RelatorioInicial: RelatorioItem[] = [
-  { id: 1, productName: "Bola de futebol", quantity: 5, price: 500 },
-  { id: 2, productName: "Luva de goleiro", quantity: 7, price: 910 },
-  { id: 3, productName: "Camisa de basquete", quantity: 3, price: 900 },
-  { id: 4, productName: "Tênis de corrida", quantity: 2, price: 1400 },
+  { id: 1, productName: "Bola de futebol", quantity: 5, revenue: 500 },
+  { id: 2, productName: "Luva de goleiro", quantity: 7, revenue: 910 },
+  { id: 3, productName: "Camisa de basquete", quantity: 3, revenue: 900 },
+  { id: 4, productName: "Tênis de corrida", quantity: 2, revenue: 1400 },
 ];
 
 export default function Page() {
@@ -21,7 +21,7 @@ export default function Page() {
 
   return (
     <div className="text-black text-center">
-      <h1 className="text-3xl font-bold mb-6">Relatório de Vendas</h1>
+      <h1 className="text-3xl flex text-white font-bold mb-6">Relatório de Vendas</h1>
       <table className="min-w-full bg-white">
         <thead>
           <tr>
@@ -37,7 +37,7 @@ export default function Page() {
               <td className="py-2 px-4 border-b border-gray-200">{item.id}</td>
               <td className="py-2 px-4 border-b border-gray-200">{item.productName}</td>
               <td className="py-2 px-4 border-b border-gray-200">{item.quantity}</td>
-              <td className="py-2 px-4 border-b border-gray-200">{item.price}</td>
+              <td className="py-2 px-4 border-b border-gray-200">{item.revenue}</td>
             </tr>
           ))}
         </tbody>
